@@ -1,4 +1,4 @@
-RGB1602 of RaspberryPi with C++ and Python3
+# RGB1602 of RaspberryPi with C++ and Python3
 ---------------------------------------------------------
 ## Enable I2C:
     Input: sudo raspi-config in terminal
@@ -45,9 +45,23 @@ You can clear the display by this function:
 
 ## Library of python3
 
-### install wiringpi
-    pip3 install wiringpi
-    
+### installation
+
+`pip3 install git+https://github.com/devriesewouter89/DFRobot_RGB1602_RaspberryPi`
+
+### optional: install wiringpi
+
+`pip3 install wiringpi`
+
+### usage
+
+```python
+from rgb1602 import rgb1602
+
+lcd = rgb1602.RGB1602(16,2)
+lcd.printout("hello world!")
+
+```    
 #### Change Color of Backlight
 One of Grove - LCD RGB Backlight's most important feature is changing the backlight color. It's very simple; just use the folowing function:
 
